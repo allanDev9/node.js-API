@@ -5,8 +5,8 @@ app.use(express.json());
 
 const students = [
     {id: 1, name: 'Allan', age: 36, enroll: true},
-    {id: 2, nmae: 'Juan', age: 45, enroll: false},
-    {id: 3, nmae: 'Joel', age: 50, enroll: false},
+    {id: 2, name: 'Juan', age: 45, enroll: false},
+    {id: 3, name: 'Joel', age: 50, enroll: false},
 ];
 
 app.get('/', (req, res) => {
@@ -45,8 +45,8 @@ app.delete('/api/students', (req, res) => {
     res.send(student);
 });
 
-const port = process.env.port || 80
-app.listen(port, () => console.log('Escuchando en puerto ${port}...'));
+const port = process.env.port || 80;
+app.listen(port, () => console.log(`Escuchando en puerto ${port}...`));
 
 
 
